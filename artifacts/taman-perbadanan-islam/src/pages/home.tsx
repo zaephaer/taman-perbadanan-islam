@@ -125,7 +125,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
+            src="/hero.jpeg"
             alt="Taman Perbadanan Islam Rengit"
             className="w-full h-full object-cover"
           />
