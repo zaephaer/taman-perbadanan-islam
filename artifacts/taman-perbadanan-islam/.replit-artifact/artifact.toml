@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Taman Perbadanan Islam Rengit"
+version = "1.0.0"
+id = "artifacts/taman-perbadanan-islam"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19795
+
+[services.development]
+run = "pnpm --filter @workspace/taman-perbadanan-islam run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/taman-perbadanan-islam", "run", "build" ]
+publicDir = "artifacts/taman-perbadanan-islam/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19795"
+BASE_PATH = "/"
