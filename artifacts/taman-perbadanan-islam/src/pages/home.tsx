@@ -250,13 +250,13 @@ export default function Home() {
               Tentang Projek
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-serif text-4xl sm:text-5xl font-bold mt-3 mb-6 leading-tight text-foreground">
-              Rumah Idaman, Hak Milik Seumur Hidup
+              Miliki Rumah Idaman Anda di Rengit, Johor!
             </motion.h2>
             <motion.p variants={fadeUp} className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Taman Perbadanan Islam di Rengit, Johor menawarkan peluang eksklusif untuk memiliki rumah teres 2 tingkat yang moden dan berkualiti di bawah skim Rumah Mampu Milik Johor (RMMJ) Jenis D. Dengan hanya 35 unit tersedia, ini adalah peluang yang tidak patut dilepaskan.
+              Taman Perbadanan Islam menawarkan peluang eksklusif untuk memiliki rumah teres 2 tingkat yang moden dan berkualiti melalui skim RMMJ Jenis D. Dengan hanya 35 unit tersedia, ini adalah peluang keemasan yang tidak boleh dilepaskan.
             </motion.p>
             <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-8">
-              Dibangunkan oleh PIJ Property Development Sdn Bhd, projek ini menawarkan tanah bertitlkan Freehold Rezab Melayu — hak milik selama-lamanya untuk generasi anda. Lokasi strategik bersebelahan Sekolah Agama Seri Merlong memastikan kemudahan pendidikan dalam jangkauan anda.
+              Dibangunkan oleh PIJ Property Development Sdn Bhd, projek ini berstatus Freehold Rezab Melayu — aset berharga untuk generasi masa depan anda. Kedudukannya yang strategik bersebelahan Sekolah Agama Seri Merlong turut menjamin kemudahan pendidikan terbaik buat anak-anak.
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
               {["Freehold", "Rezab Melayu", "Iklan Diluluskan JPN", "RMMJ-D"].map((tag) => (
