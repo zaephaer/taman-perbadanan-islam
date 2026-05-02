@@ -121,8 +121,8 @@
   --sidebar-accent-foreground: 156 72% 10%;
   --sidebar-ring: 156 72% 22%;
 
-  --app-font-sans: 'Plus Jakarta Sans', sans-serif;
-  --app-font-serif: 'Playfair Display', serif;
+  --app-font-sans: 'Open Sans', sans-serif;
+  --app-font-serif: 'Poppins', sans-serif;
   --app-font-mono: Menlo, monospace;
   
   --radius: .5rem;
