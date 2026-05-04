@@ -9,12 +9,22 @@ if [ -z "${GITHUB_PAT:-}" ]; then
 fi
 
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-REMOTE_URL="https://oauth2:${GITHUB_PAT}@github.com/${GITHUB_REPO}.git"
-SAFE_REMOTE="https://github.com/${GITHUB_REPO}.git"
+REMOTE_URL="https://github.com/${GITHUB_REPO}.git"
+
+ASKPASS_SCRIPT=$(mktemp /tmp/git-askpass-XXXXXX.sh)
+chmod 700 "$ASKPASS_SCRIPT"
+printf '#!/bin/sh\necho "$GITHUB_PAT"\n' > "$ASKPASS_SCRIPT"
+
+cleanup() {
+  rm -f "$ASKPASS_SCRIPT"
+}
+trap cleanup EXIT
 
 echo "Syncing branch '${CURRENT_BRANCH}' to GitHub (${GITHUB_REPO})..."
 
-git push "$REMOTE_URL" "${CURRENT_BRANCH}:${CURRENT_BRANCH}" 2>&1 \
-  | sed "s|${REMOTE_URL}|${SAFE_REMOTE}|g"
+GIT_ASKPASS="$ASKPASS_SCRIPT" \
+  GIT_TERMINAL_PROMPT=0 \
+  git -c credential.username=oauth2 \
+  push "$REMOTE_URL" "${CURRENT_BRANCH}:${CURRENT_BRANCH}"
 
 echo "Successfully synced to GitHub: https://github.com/${GITHUB_REPO}"
