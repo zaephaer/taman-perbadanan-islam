@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "NqvtWG1CniMprXG0XzLSf"
+uri = "file://README.md"
+type = "text"
+title = "README.md — Taman Perbadanan Islam Rengit"
