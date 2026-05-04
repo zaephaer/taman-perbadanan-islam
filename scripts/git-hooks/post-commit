@@ -1,0 +1,12 @@
+#!/bin/bash
+# Automatically sync to GitHub after every local git commit.
+# Runs in the background so it does not block git operations.
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+LOG_FILE="$REPO_ROOT/.local/github-sync.log"
+mkdir -p "$(dirname "$LOG_FILE")"
+{
+  echo "[$(date -u '+%Y-%m-%dT%H:%M:%SZ')] post-commit sync starting..."
+  bash "$REPO_ROOT/scripts/sync-github.sh" && \
+    echo "[$(date -u '+%Y-%m-%dT%H:%M:%SZ')] sync succeeded" || \
+    echo "[$(date -u '+%Y-%m-%dT%H:%M:%SZ')] WARNING: sync failed — run 'bash scripts/sync-github.sh' to retry"
+} >> "$LOG_FILE" 2>&1 &
