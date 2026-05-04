@@ -122,104 +122,135 @@ export default function Home() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0">
-          <img
-            src="/hero.jpeg"
-            alt="Taman Perbadanan Islam Rengit"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
-        </div>
+      <section className="min-h-screen flex items-center bg-background pt-20" id="projek">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-24">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-2xl"
-          >
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
+            {/* Left — text content */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-secondary/90 text-secondary-foreground text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6"
+              transition={{ duration: 0.7, ease: "easeOut" }}
             >
-              <span className="w-2 h-2 bg-secondary-foreground rounded-full animate-pulse" />
-              Unit Terhad — Untuk Dijual
-            </motion.span>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.7 }}
-              className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4"
-            >
-              Taman
-              <br />
-              Perbadanan
-              <br />
-              <span className="text-secondary">Islam</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-white/80 text-xl font-medium mb-2 tracking-wide"
-            >
-              Rengit, Johor — RMMJ-D
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
-              className="text-white/70 text-base mb-10 leading-relaxed"
-            >
-              Teres 2 Tingkat mewah bertitlkan Freehold Rezab Melayu. Rumah impian anda bermula dari{" "}
-              <span className="text-secondary font-bold text-xl">RM300,000</span>
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.85, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <button
-                onClick={scrollToForm}
-                className="bg-secondary text-secondary-foreground px-8 py-4 rounded font-bold text-base hover:bg-secondary/90 transition-all hover:scale-105 shadow-lg"
+              <motion.span
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                className="inline-flex items-center gap-2 bg-secondary/15 text-secondary text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6 border border-secondary/30"
               >
-                Daftar Sekarang
-              </button>
-              <a
-                href="https://wa.me/60124346073"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-center gap-2 bg-white/15 border border-white/30 backdrop-blur text-white px-8 py-4 rounded font-semibold text-base hover:bg-white/25 transition-all"
-              >
-                <MessageCircle className="w-5 h-5" />
-                WhatsApp Kami
-              </a>
-            </motion.div>
-          </motion.div>
+                <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
+                Unit Terhad — Untuk Dijual
+              </motion.span>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1 }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/50"
-          >
-            <span className="text-xs tracking-widest uppercase">Tatal ke bawah</span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
-            >
-              <ChevronDown className="w-5 h-5" />
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.7 }}
+                className="font-serif text-5xl sm:text-6xl lg:text-6xl font-bold text-foreground leading-tight mb-4"
+              >
+                Taman Perbadanan{" "}
+                <span className="text-primary">Islam</span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.45, duration: 0.6 }}
+                className="text-muted-foreground text-lg font-medium mb-3"
+              >
+                Rengit, Johor — RMMJ-D
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.55, duration: 0.6 }}
+                className="text-muted-foreground text-base leading-relaxed mb-8"
+              >
+                Teres 2 Tingkat mewah bertitlkan Freehold Rezab Melayu. Rumah impian anda bermula dari{" "}
+                <span className="text-secondary font-bold text-xl">RM300,000</span>
+              </motion.p>
+
+              {/* Key specs row */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.65, duration: 0.6 }}
+                className="flex flex-wrap gap-6 mb-10 border-t border-border pt-6"
+              >
+                {[
+                  { label: "Bilik Tidur", value: "3" },
+                  { label: "Bilik Air", value: "2" },
+                  { label: "Keluasan", value: "1,400 kps" },
+                  { label: "Harga Dari", value: "RM300K" },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <p className="font-serif font-bold text-xl text-foreground">{s.value}</p>
+                    <p className="text-muted-foreground text-xs">{s.label}</p>
+                  </div>
+                ))}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.75, duration: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <button
+                  onClick={scrollToForm}
+                  className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-bold text-base hover:bg-primary/90 transition-all hover:scale-105 shadow-md"
+                >
+                  Daftar Sekarang
+                </button>
+                <a
+                  href="https://wa.me/60124346073"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-center gap-2 border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold text-base hover:bg-primary hover:text-primary-foreground transition-all"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  WhatsApp Kami
+                </a>
+              </motion.div>
             </motion.div>
-          </motion.div>
+
+            {/* Right — image */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+              className="relative"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/hero.jpeg"
+                  alt="Taman Perbadanan Islam Rengit"
+                  className="w-full h-full object-cover aspect-[4/3]"
+                />
+              </div>
+              {/* Floating badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.9, duration: 0.5 }}
+                className="absolute -bottom-5 -left-5 bg-primary text-primary-foreground px-5 py-3 rounded-xl shadow-lg"
+              >
+                <p className="font-bold text-lg leading-none">35 Unit</p>
+                <p className="text-primary-foreground/80 text-xs mt-0.5">Unit Terhad Sahaja</p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.0, duration: 0.5 }}
+                className="absolute -top-4 -right-4 bg-secondary text-secondary-foreground px-5 py-3 rounded-xl shadow-lg"
+              >
+                <p className="font-bold text-sm leading-none">CCC Jun 2026</p>
+                <p className="text-secondary-foreground/80 text-xs mt-0.5">Freehold Rezab Melayu</p>
+              </motion.div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
