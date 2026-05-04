@@ -25,3 +25,10 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## GitHub Repository
+
+The full codebase is mirrored on GitHub:
+- **URL**: https://github.com/zaephaer/taman-perbadanan-islam
+- **Branch**: `main`
+- To push updates: `git push "https://zaephaer:${GITHUB_PAT}@github.com/zaephaer/taman-perbadanan-islam.git" main`
