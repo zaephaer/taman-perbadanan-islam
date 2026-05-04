@@ -98,7 +98,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           <div className="flex items-center">
-            <img src="/logo.png" alt="PIJ Property Development Sdn Bhd" className="h-[52px] w-auto" />
+            <img src="/logo.png" alt="PIJ Property Development Sdn Bhd" className="h-[60px] w-auto" />
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
             <a href="#projek" className="text-muted-foreground hover:text-primary transition-colors">Projek</a>
