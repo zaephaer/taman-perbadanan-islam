@@ -97,14 +97,8 @@ export default function Home() {
       {/* ── NAVBAR ── */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-primary rounded-sm flex items-center justify-center">
-              <span className="text-primary-foreground font-serif font-bold text-lg leading-none">P</span>
-            </div>
-            <div className="leading-none">
-              <p className="font-serif font-semibold text-sm text-foreground">PIJ Property</p>
-              <p className="text-xs text-muted-foreground">Development Sdn Bhd</p>
-            </div>
+          <div className="flex items-center">
+            <img src="/logo.png" alt="PIJ Property Development Sdn Bhd" className="h-10 w-auto" />
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
             <a href="#projek" className="text-muted-foreground hover:text-primary transition-colors">Projek</a>
@@ -731,14 +725,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-10 mb-10">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 bg-secondary rounded-sm flex items-center justify-center">
-                  <span className="text-secondary-foreground font-serif font-bold text-lg leading-none">P</span>
-                </div>
-                <div>
-                  <p className="font-serif font-semibold text-background">PIJ Property Development</p>
-                  <p className="text-background/50 text-xs">Sdn Bhd (323394-D)</p>
-                </div>
+              <div className="mb-4">
+                <img src="/logo.png" alt="PIJ Property Development Sdn Bhd" className="h-12 w-auto brightness-0 invert" />
               </div>
               <p className="text-sm leading-relaxed text-background/60">
                 Membangun komuniti Muslim yang sejahtera melalui rumah berkualiti dan mampu milik di Johor.
