@@ -1,0 +1,12 @@
+[build]
+  command = "pnpm install --frozen-lockfile && pnpm --filter @workspace/taman-perbadanan-islam run build:netlify"
+  publish = "artifacts/taman-perbadanan-islam/dist/public"
+
+[build.environment]
+  NODE_VERSION  = "20"
+  PNPM_VERSION  = "9"
+
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200

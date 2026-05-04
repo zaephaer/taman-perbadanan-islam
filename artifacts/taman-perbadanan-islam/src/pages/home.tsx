@@ -82,7 +82,8 @@ export default function Home() {
   });
 
   const onSubmit = async (data: FormData) => {
-    const response = await fetch(`${import.meta.env.BASE_URL}api/leads`, {
+    const apiBase = (import.meta.env.VITE_API_URL as string | undefined)?.replace(/\/$/, "") ?? "";
+    const response = await fetch(`${apiBase}/api/leads`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
