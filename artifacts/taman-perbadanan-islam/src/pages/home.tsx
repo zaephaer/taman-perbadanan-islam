@@ -82,8 +82,14 @@ export default function Home() {
   });
 
   const onSubmit = async (data: FormData) => {
-    await new Promise((r) => setTimeout(r, 800));
-    console.log("Lead submitted:", data);
+    const response = await fetch(`${import.meta.env.BASE_URL}api/leads`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) {
+      throw new Error("Gagal menghantar borang. Sila cuba semula.");
+    }
     setSubmitted(true);
     reset();
   };
